@@ -257,6 +257,7 @@ footer {
   background-image: linear-gradient(rgb(194, 194, 0), yellow);
   padding: 20px 50px;
   flex-direction: column;
+  overflow: overlay;
 }
 
 footer .social,
