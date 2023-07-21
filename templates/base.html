@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+
+    {% endblock head %}
+      <link rel="icon" href="/static/images/logo.png" type="image/x-icon">
+      <link rel="stylesheet" href="/static/css/design.css">
+      <meta name="viewport" content="width=device-width", initial-scale="1.0">
+      <meta charset="utf-8">
+      <title>  {% block title %}
+
+        {% endblock title %}
+        Laxmi Bee Keeping</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/92608aa66e.js" crossorigin="anonymous"></script>
+      </head>
+  <body>
+      
+   
+      {% block body %}
+ 
+  {% endblock body %}
+
+  
+  
+  <header class="header" id="header1">
+    <a href="/" class="navimg"><img src="/static/images/logo.png" ></a>
+    <div class="group">
+      <ul class="navigation">
+        <li><a href="/">Home</a></li>
+        <li><a href="/shop/">Shop Now</a></li>
+        <li><a href="/service/">Our Services</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        <li><a href="/about/">About Us</a></li>
+        
+      </ul>
+      <div class="search">
+        <span class="icon">
+          <ion-icon name="search-outline" class="searchbtn"></ion-icon>
+          <ion-icon name="close-outline" class="closebtn"></ion-icon>
+        </span>
+      </div>
+      <ion-icon name="menu-outline" id="menulog1" class="menulog"></ion-icon>
+    </div>
+    <div class="searchbox">
+      <input type="text" placeholder="search here..." id="search-text">
+    </div>
+  </header>
+  <script src="/static/js/index.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+  <script>
+    let searchbtn = document.querySelector('.searchbtn');
+    let closebtn = document.querySelector('.closebtn');
+    let searchbox = document.querySelector('.searchbox');
+    let navigation = document.querySelector('.navigation');
+    let menulog = document.querySelector('.menulog');
+    let header = document.querySelector('header');
+    searchbtn.onclick = function(){
+      closebtn.classList.add('active');
+      searchbox.classList.add('active');
+      searchbtn.classList.add('active');
+      menulog.classList.add('hide');
+    }
+    closebtn.onclick = function(){
+      closebtn.classList.remove('active');
+      searchbox.classList.remove('active');
+      searchbtn.classList.remove('active');
+      menulog.classList.remove('hide')
+    }
+    menulog.onclick = function(){
+      header.classList.toggle('open');
+      searchbox.classList.remove('active');
+      searchbtn.classList.remove('active');
+      menulog.classList.remove('hide')
+    }
+    
+  </script>
+  <footer>
+    <ul class="social">
+      <li><a href="https://www.facebook.com/profile.php?id=100026010517058"><i class="fa-brands fa-facebook"></i></a></li>
+      <li><a href="https://www.youtube.com/@LaxmiHoneyIndustries"><i class="fa-brands fa-youtube"></i></a></li>
+      <li><a href="https://www.instagram.com/biplov__gautam/"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="mailto:laxmihoneyindustry@gmail.com"><i class="fa-regular fa-envelope"></i></a></li>
+    </ul>
+    <ul class="footmenu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/service/">services</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+    <p>&copy;2023 LaxmiBeeKeeping | All Rights Reserved.</p>
+    <p>Developer: Biplov Gautam</p>
+  </footer>
+
+  </body>
+</html>
